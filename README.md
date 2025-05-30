@@ -20,7 +20,7 @@ WordSurf integrates several advanced technologies:
 - **BEM AI** for cleaning and structuring the scraped text
 - **OpenAI API** for analyzing text tone and assigning "curviness" scores
 - **MiniMax Audio** for text-to-speech generation
-- **Browserbase** for embedding a live view of the source webpage
+- **Browserbase** for seamless level suggestion
 - **AWS (Amplify + DynamoDB)** for storing player progress
 
 ## Getting Started
