@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordSurf - Surf the Web</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1>WordSurf</h1>
+            <p>Loading your surfing experience...</p>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p id="loading-status">Initializing...</p>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="background-container"></div>
+        <div id="ui-overlay">
+            <div id="score-display">Score: <span id="score">0</span></div>
+            <div id="controls-hint">Use arrow keys to surf</div>
+        </div>
+    </div>
+
+    <div id="start-screen" class="screen">
+        <div class="screen-content">
+            <h1>WordSurf</h1>
+            <p>Surf across the web, one sentence at a time!</p>
+            <div class="url-input-container">
+                <input type="text" id="url-input" placeholder="Enter a URL to surf" value="https://en.wikipedia.org/wiki/Surfing">
+                <button id="start-button">Start Surfing</button>
+            </div>
+            <p>Or choose from our featured content:</p>
+            <div class="featured-content">
+                <button class="featured-item" data-url="https://en.wikipedia.org/wiki/Ocean">Oceans</button>
+                <button class="featured-item" data-url="https://en.wikipedia.org/wiki/Web_browser">Web Browsers</button>
+                <button class="featured-item" data-url="https://en.wikipedia.org/wiki/Artificial_intelligence">AI</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="end-screen" class="screen">
+        <div class="screen-content">
+            <h1>Surf Complete!</h1>
+            <p>You've successfully surfed through the content!</p>
+            <div id="final-score">Final Score: <span>0</span></div>
+            <button id="play-again-button">Surf Again</button>
+        </div>
+    </div>
+
+    <!-- Third-party libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <!-- Game scripts -->
+    <script src="src/js/config.js"></script>
+    <script src="src/js/utils.js"></script>
+    <script src="src/js/content-pipeline.js"></script>
+    <script src="src/js/geometry-generator.js"></script>
+    <script src="src/js/audio-manager.js"></script>
+    <script src="src/js/player.js"></script>
+    <script src="src/js/game.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
